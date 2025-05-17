@@ -18,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
@@ -85,6 +86,8 @@ public class GameController {
 
         // Configurar evento de clic en el botón UNO
         unoButton.setDisable(true);
+        deckImageView.setImage(new Image(getClass().getResourceAsStream("/images/cards/deck_of_cards.png")));
+
     }
 
     private void setSelectedColor(CardColor color) {
