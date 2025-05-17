@@ -6,3 +6,22 @@ package com.uno.exceptions;
  */
 public class EmptyDeckException extends Exception {
 
+    /**
+     * Constructor con mensaje de error.
+     *
+     * @param message Mensaje descriptivo del error
+     */
+    public EmptyDeckException(String message) {
+        super(message);
+    }
+
+    /**
+     * Constructor con mensaje de error y causa raíz.
+     *
+     * @param message Mensaje descriptivo del error
+     * @param cause Causa raíz de la excepción
+     */
+    public EmptyDeckException(String message, Throwable cause) {
+        super(message, cause);
+    }
+}
