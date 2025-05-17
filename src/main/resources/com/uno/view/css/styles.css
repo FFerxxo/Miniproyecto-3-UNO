@@ -1,0 +1,134 @@
+/* Estilos generales */
+.root {
+    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* Fondo del juego */
+.game-background {
+    -fx-background-color: #1a6840;
+}
+
+/* Panel de información superior */
+.info-panel {
+    -fx-background-color: #135235;
+    -fx-padding: 10px;
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.status-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #ffffff;
+}
+
+/* Botón UNO */
+.uno-button {
+    -fx-background-color: #ff0000;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-padding: 8px 15px;
+    -fx-background-radius: 5px;
+}
+
+.uno-button:hover {
+    -fx-background-color: #cc0000;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+}
+
+/* Área de la mesa */
+.table-area {
+    -fx-padding: 20px;
+}
+
+.deck-area, .discard-area {
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Manos de los jugadores */
+.player-hand, .computer-hand {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* Cartas */
+.card-view {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5, 0, 0, 0);
+    -fx-cursor: hand;
+}
+
+.card-view:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(255,255,255,0.8), 10, 0, 0, 0);
+    -fx-translate-y: -5px;
+}
+
+/* Indicador de color */
+.color-indicator {
+    -fx-stroke: #ffffff;
+    -fx-stroke-width: 2px;
+}
+
+/* Panel de control inferior */
+.control-panel {
+    -fx-background-color: #135235;
+    -fx-padding: 10px;
+}
+
+.player-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.message-label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Diálogo de selección de color */
+.color-selection-dialog {
+    -fx-background-color: #135235;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2px;
+}
+
+.dialog-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.color-rect {
+    -fx-stroke: #ffffff;
+    -fx-stroke-width: 2px;
+    -fx-cursor: hand;
+}
+
+.color-rect:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(255,255,255,0.8), 10, 0, 0, 0);
+}
+
+.red-rect {
+    -fx-fill: #ff0000;
+}
+
+.blue-rect {
+    -fx-fill: #0000ff;
+}
+
+.green-rect {
+    -fx-fill: #00aa00;
+}
+
+.yellow-rect {
+    -fx-fill: #ffcc00;
+}
