@@ -13,6 +13,7 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <javafx.version>21</javafx.version>
+        <junit.version>5.10.0</junit.version>
     </properties>
 
     <dependencies>
@@ -33,11 +34,17 @@
             <version>${javafx.version}</version>
         </dependency>
 
-        <!-- JUnit para pruebas unitarias -->
+        <!-- JUnit 5: API + Engine -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.10.0</version>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -53,6 +60,7 @@
                     <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
@@ -61,6 +69,8 @@
                     <mainClass>com.uno.view.MainApp</mainClass>
                 </configuration>
             </plugin>
+
+            <!-- Surefire ejecuta los tests con JUnit 5 automáticamente -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
