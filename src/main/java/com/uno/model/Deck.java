@@ -6,7 +6,13 @@ import com.uno.model.enums.CardType;
 
 import java.util.*;
 
-/** Mazo del juego UNO (56 cartas). */
+/**
+ * Mazo de 56 cartas UNO.
+ * Incluye operaciones para robar, descartar
+ * y barajar.
+ */
+
+
 public class Deck {
     private final Stack<Card> cards;
     private final Stack<Card> discardPile;

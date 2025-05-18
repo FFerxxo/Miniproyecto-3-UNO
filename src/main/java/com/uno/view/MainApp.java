@@ -9,7 +9,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * Clase principal que inicia la aplicación JavaFX.
+ * Punto de arranque de la aplicación JavaFX.
+ * Carga la vista principal (FXML) y delega la lógica al {@link com.uno.controller.GameController}.
+ *
+ * @author Andres Barbosa , Natalia Cardona
  */
 public class MainApp extends Application {
 

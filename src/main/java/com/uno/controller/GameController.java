@@ -34,7 +34,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Controlador para la vista principal del juego.
+ * Controlador MVC que gestiona la lógica de juego y enlaza el modelo con la GUI.
  */
 public class GameController {
 
