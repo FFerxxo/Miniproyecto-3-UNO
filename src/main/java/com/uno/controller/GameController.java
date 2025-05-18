@@ -3,6 +3,7 @@ package com.uno.controller;
 import com.uno.exceptions.EmptyDeckException;
 import com.uno.exceptions.InvalidCardPlayException;
 import com.uno.model.Card;
+import com.uno.adapter.CardImageAdapter;
 import com.uno.model.Deck;
 import com.uno.model.Player;
 import com.uno.model.HumanPlayer;
@@ -86,6 +87,7 @@ public class GameController {
 
         // Configurar evento de clic en el botón UNO
         unoButton.setDisable(true);
+        unoButton.setOnAction(new UnoButtonHandler());
         deckImageView.setImage(new Image(getClass().getResourceAsStream("/images/cards/deck_of_cards.png")));
 
     }
@@ -232,7 +234,7 @@ public class GameController {
 
         for (int i = 0; i < playerCards.size(); i++) {
             Card card = playerCards.get(i);
-            ImageView cardView = new ImageView(imageLoader.getCardImage(card));
+            ImageView cardView = CardImageAdapter.adapt(card);
 
             cardView.setFitWidth(80);
             cardView.setFitHeight(120);
@@ -927,4 +929,15 @@ public class GameController {
             return defaultColor;
         }
     }
+
+    /**
+     * Manejador del botón UNO.
+     */
+    private class UnoButtonHandler implements javafx.event.EventHandler<javafx.event.ActionEvent> {
+        @Override
+        public void handle(javafx.event.ActionEvent e) {
+            handleUnoButtonAction();
+        }
+    }
+
 }
